@@ -1,12 +1,12 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { Suspense } from 'react';
 
 export default function SharedLayout() {
   return (
     <div>
       <header>
-        <link to="/">Home</link>
-        <link to="/movies">Movies</link>
+        <Link to="/">Home</Link>
+        <Link to="/movies">Movies</Link>
       </header>
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />

@@ -22,15 +22,15 @@ export default function Movies() {
   return (
     <div>
       <h2>Search Movies</h2>
-      <SearchForm onSubmit={handleSubmit}>
-        <SearchInput
+      <form onSubmit={handleSubmit}>
+        <input
           type="text"
           value={query}
           onChange={e => setQuery(e.target.value)}
           placeholder="Type to search..."
         />
-        <SearchButton type="submit">Search</SearchButton>
-      </SearchForm>
+        <button type="submit">Search</button>
+      </form>
       <div>
         {movies.map(movie => (
           <div

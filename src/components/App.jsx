@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SharedLayout from './SharedLayout';
 
@@ -10,7 +10,7 @@ const Reviews = lazy(() => import('./Reviews'));
 
 export default function App() {
   return (
-    <BrowserRouter basename="/goit-react-hw-05-movies/">
+    <BrowserRouter basename="/goit-react-hw-05-movies">
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
