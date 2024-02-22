@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { searchMovies } from '../components/Api';
+import { searchMovies } from '../Api';
+import css from './movies.module.css';
 
 export default function Movies() {
   const [query, setQuery] = useState('');
@@ -28,8 +29,11 @@ export default function Movies() {
           value={query}
           onChange={e => setQuery(e.target.value)}
           placeholder="Type to search..."
+          className={css.moviesInput}
         />
-        <button type="submit">Search</button>
+        <button className={css.moviesButton} type="submit">
+          Search
+        </button>
       </form>
       <div>
         {movies.map(movie => (

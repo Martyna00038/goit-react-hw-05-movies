@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams, Outlet } from 'react-router-dom';
-import { fetchMovieById } from '../components/Api';
+import { fetchMovieById } from '../Api';
+import css from './movieDetails.module.css';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
@@ -27,12 +28,21 @@ export default function MovieDetails() {
           <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
+            className={css.movieImage}
           />
-          <p>{movie.overview}</p>
-          <p>User Score: {Math.round(movie.vote_average * 10)}%</p>
-          <p>Genres: {movie.genres.map(genre => genre.name).join(', ')}</p>
-          <link to="cast">Show Cast</link>
-          <link to="reviews">Show Reviews</link>
+          <p className={css.movieDescription}>{movie.overview}</p>
+          <p className={css.movieDescription}>
+            User Score: {Math.round(movie.vote_average * 10)}%
+          </p>
+          <p className={css.movieDescription}>
+            Genres: {movie.genres.map(genre => genre.name).join(', ')}
+          </p>
+          <Link className={css.movieLink} to="cast">
+            Show Cast
+          </Link>
+          <Link className={css.movieLink} to="reviews">
+            Show Reviews
+          </Link>
           <Outlet />
         </div>
       )}

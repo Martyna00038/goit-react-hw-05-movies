@@ -1,0 +1,11 @@
+.navLink {
+  color: blueviolet;
+  text-decoration: none;
+  font-size: 22px;
+  margin: 5px;
+  font-weight: 700;
+}
+
+.navLink:hover {
+  color: rgb(79, 11, 143);
+}

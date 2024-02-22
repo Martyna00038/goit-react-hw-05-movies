@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieCredits } from './Api';
+import { fetchMovieCredits } from '../Api';
+import css from './cast.module.css';
 
 export default function Cast() {
   const { movieId } = useParams();
@@ -21,9 +22,9 @@ export default function Cast() {
 
   return (
     <div>
-      <ul>
+      <ul className={css.castList}>
         {cast.map(actor => (
-          <li key={actor.id}>
+          <li className={css.castItem} key={actor.id}>
             <img
               src={
                 actor.profile_path
@@ -31,8 +32,9 @@ export default function Cast() {
                   : 'placeholder_image_url_here'
               }
               alt={actor.name}
+              className={css.castImage}
             />
-            <p>{actor.name}</p>
+            <p className={css.castName}>{actor.name}</p>
           </li>
         ))}
       </ul>

@@ -1,0 +1,17 @@
+.moviesInput {
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.moviesButton {
+  color: white;
+  background-color: blueviolet;
+  padding: 6px 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.moviesButton:hover {
+  color: black;
+}

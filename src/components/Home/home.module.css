@@ -1,0 +1,16 @@
+.homeList {
+  list-style: none;
+}
+
+.homeItem {
+  margin: 10px;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: #282525;
+}
+
+.homeLink:hover {
+  color: blueviolet;
+}

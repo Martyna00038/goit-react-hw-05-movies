@@ -4,7 +4,7 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 axios.defaults.baseURL = BASE_URL;
 
 axios.defaults.headers.common['Authorization'] =
-  'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MTU4MGEwNzMwMWM4Y2Y2MDE1NmMzOGQ5NjViMzFjNyIsInN1YiI6IjY1ZDY0Y2M3MjVjZDg1MDE4NjdlYzI5ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IGg87z05r1r2foqoV5oHcdgwaCCNHoQQNLbnMdGV8oE';
+  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MTU4MGEwNzMwMWM4Y2Y2MDE1NmMzOGQ5NjViMzFjNyIsInN1YiI6IjY1ZDY0Y2M3MjVjZDg1MDE4NjdlYzI5ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IGg87z05r1r2foqoV5oHcdgwaCCNHoQQNLbnMdGV8oE';
 
 export async function fetchTrendingMovies() {
   try {

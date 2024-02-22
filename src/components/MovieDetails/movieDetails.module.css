@@ -1,0 +1,25 @@
+.movieImage {
+  width: 180px;
+  height: auto;
+}
+
+.movieDescription {
+  font-size: 16px;
+}
+
+.movieLink {
+  text-decoration: none;
+  font-size: 14px;
+  background-color: blueviolet;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.movieLink:hover {
+  color: black;
+}
