@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { searchMovies } from '../Api';
+import { searchMovies } from '../../services/api';
 import css from './movies.module.css';
 
 export default function Movies() {

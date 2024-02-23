@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams, Outlet } from 'react-router-dom';
-import { fetchMovieById } from '../Api';
+import {
+  Link,
+  useParams,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
+import { fetchMovieById } from '../../services/api';
 import css from './movieDetails.module.css';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getMovieDetails = async () => {
@@ -20,8 +28,15 @@ export default function MovieDetails() {
     getMovieDetails();
   }, [movieId]);
 
+  const handleGoBack = () => {
+    navigate(location.state?.from ?? '/');
+  };
+
   return (
     <div>
+      <button className={css.movieLink} onClick={handleGoBack}>
+        Go back
+      </button>
       {movie && (
         <div>
           <h2>{movie.title}</h2>
